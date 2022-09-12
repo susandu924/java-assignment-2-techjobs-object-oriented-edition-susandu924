@@ -35,6 +35,27 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
+
+    @Override
+    public String toString() {
+////        for (job1 of jobs){
+//        if("Name: "+ name) {
+//            return "Data not available";
+//        }
+
+//        if value is empty} return Key: "Data not available" name.getValue ==
+//        if ID: value is filled and other fields are empty return "OOPS! This job does not seem to exist."
+//            if()
+        return "\n" +
+//                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer +"\n" +
+                "Location: " + location +"\n"+
+                "PositionType: " + positionType + "\n"+
+                "CoreCompetency: " + coreCompetency +
+                "\n";
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
