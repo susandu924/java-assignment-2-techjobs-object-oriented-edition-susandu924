@@ -38,14 +38,27 @@ public class Job {
 
     @Override
     public String toString() {
-////        for (job1 of jobs){
-//        if("Name: "+ name) {
-//            return "Data not available";
-//        }
+
+//        if((getId()==id) &&)
+        if(name.toString().equals("")) {
+            return "Data not available";
+        }
+        if(employer.toString().equals("")){
+            return "Data not available";
+        }
+        if(location.toString().equals("")) {
+            return "Data not available";
+        }
+        if(positionType.toString().equals("")) {
+            return "Data not available";
+        }
+        if(coreCompetency.toString().equals("")) {
+            return "Data not available";
+        }
 
 //        if value is empty} return Key: "Data not available" name.getValue ==
 //        if ID: value is filled and other fields are empty return "OOPS! This job does not seem to exist."
-//            if()
+
         return "\n" +
 //                "ID: " + id + "\n" +
                 "Name: " + name + "\n" +

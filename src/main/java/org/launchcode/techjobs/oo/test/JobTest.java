@@ -99,4 +99,9 @@ public class JobTest {
 
     }
 
+    @Test
+    public void testToStringHandlesEmptyField(){
+
+    }
+
 }
