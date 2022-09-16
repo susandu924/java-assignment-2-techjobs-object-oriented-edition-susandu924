@@ -78,7 +78,12 @@ public class JobTest {
 //Location: _______
 //Position Type: _______
 //Core Competency: _______
-//If a field is empty, the method should add, “Data not available” after the label.
+//If a field is empty, the method should add, “Data not available” af
+//
+//
+//
+//
+// ter the label.
 //
 //(Bonus) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
 //
@@ -88,9 +93,27 @@ public class JobTest {
 //This test should check that the first and last characters of the string both the newline character, \n. Recall that can get the character at a given position in a string using the string method charAt.
     @Test
     public  void testToStringStartsAndEndsWithNewLine(){
+        Job jobExpected = new Job();
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-       assertEquals(job1.toString(), "\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPositionType: Quality control\nCoreCompetency: Persistence\n");
+        assertEquals('\n', job1.toString().charAt(0));
+//        char lastChar = job1.toString().length()-1
+        char lastChar = job1.toString().charAt(job1.toString().length() - 1);
+//                String str = "India";
+//System.out.println("last char = " + str.charAt(str.length() - 1));
+//        (job1.charAt(job1.length())-1)
+//
+        assertEquals('\n', lastChar);
+
+//        assertEquals( jobExpected.toString().charAt(0), job1.toString().charAt(0));
+//        assertEquals( jobExpected.toString().charAt(jobExpected.toString().length()), job1.toString().charAt(job1.toString().length()));
+
+//toString is the method that contains the proper print out with the \n line break string in it, but its a bunch of tiny strings
+//        the toString method, returns the key:value pairs of an instance of the job class, like job1
+//
+
+
+//        assertEquals("\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPositionType: Quality control\nCoreCompetency: Persistence\n"), (job1.toString();
     }
 
     @Test
@@ -99,9 +122,10 @@ public class JobTest {
 
     }
 
-    @Test
-    public void testToStringHandlesEmptyField(){
-
-    }
+//    @Test
+//    public void testToStringHandlesEmptyField(){
+//        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//        assertEquals(job1.toString(),"", " ");
+//    }
 
 }
