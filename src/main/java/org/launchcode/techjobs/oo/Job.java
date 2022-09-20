@@ -35,39 +35,39 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-
     @Override
     public String toString() {
 
-////        if((id.getId()==id) &&)
-//        if(name.toString().equals("")) {
-//            return "Data not available";
-//        }
-//        if(employer.toString().equals("")){
-//            return "Data not available";
-//        }
-//        if(location.toString().equals("")) {
-//            return "Data not available";
-//        }
-//        if(positionType.toString().equals("")) {
-//            return "Data not available";
-//        }
-//        if(coreCompetency.toString().equals("")) {
-//            return "Data not available";
-//        }
-//
-////        if value is empty} return Key: "Data not available" name.getValue ==
-////        if ID: value is filled and other fields are empty return "OOPS! This job does not seem to exist."
-//
-        return "\n" +
-                "ID: " + id + "\n" +
+        String output = "";
+
+//        if (id.equals(null)){
+//     }
+        if (name.equals("")) {
+            name = "Data not available";
+        }
+        if (employer.getValue().equals("")) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().equals("")) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().equals("")) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().equals("")) {
+             coreCompetency.setValue("Data not available");
+        }
+        output = String.format("\nID: " + id + "\n" +
                 "Name: " + name + "\n" +
-                "Employer: " + employer +"\n" +
-                "Location: " + location +"\n"+
-                "PositionType: " + positionType + "\n"+
-                "CoreCompetency: " + coreCompetency +
-                "\n";
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: "+ coreCompetency + "\n" );
+        return output;
+
     }
+////        if value is empty} return Key: "Data not available" name.getValue ==
+////        if ID: value is filled and other fields are empty return "OOPS! This job does not seem to exist.
 
     @Override
     public boolean equals(Object o) {
