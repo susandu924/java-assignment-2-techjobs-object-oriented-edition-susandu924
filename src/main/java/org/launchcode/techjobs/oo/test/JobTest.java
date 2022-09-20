@@ -16,21 +16,6 @@ import static org.junit.Assert.*;
 @RunWith(JUnit4.class)
 public class JobTest {
 
-//        Car test_car;
-//
-//    @Before
-//    public void createCarObject(){
-//        test_car =new Car("Toyota", "Prius", 10, 50);
-//    }
-    Job job1;
-    Job job2;
-
-    @Before
-    public void createJobObject() {
-        Job job1 = new Job();
-        Job job2 = new Job();
-    }
-
     @Test
     public void testSettingJobId() {
         Job job1 = new Job();
