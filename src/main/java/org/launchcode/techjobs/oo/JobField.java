@@ -25,16 +25,17 @@ public abstract class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof JobField)) return false;
+//        if (o == null || getClass() != o.getClass()) return false;
         JobField jobField = (JobField) o;
-        return id == jobField.id && Objects.equals(value, jobField.value);
+//        return id == jobField.id && value.equals(jobField.value);
+        return getId() == jobField.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, value);
+        return Objects.hash(id);
     }
-
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.
 

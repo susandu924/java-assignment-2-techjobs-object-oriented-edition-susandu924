@@ -43,20 +43,13 @@ public class JobTest {
 //    Generate two Job objects that have identical field values EXCEPT for id. Test that equals returns false.
 //    Can I just create 2 generic objects of the Job class to run in these tests? with before
     @Test
-    public void testJobsForEquality(){
+    public void testJobsForEquality() {
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(job1.equals(job2));
-//        equals returns false?
     }
 
-//(Bonus) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
-//
-//In JobTest, add a new test named testToStringStartsAndEndsWithNewLine to check the first requirement. Be sure to use assertEquals to verify that these characters are correct, and to use the exact formatting demonstrated above.
-//
-//Tip
-//This test should check that the first and last characters of the string both the newline character, \n. Recall that can get the character at a given position in a string using the string method charAt.
-    @Test
+        @Test
     public  void testToStringStartsAndEndsWithNewLine(){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         char lastChar = job1.toString().charAt(job1.toString().length() - 1);
