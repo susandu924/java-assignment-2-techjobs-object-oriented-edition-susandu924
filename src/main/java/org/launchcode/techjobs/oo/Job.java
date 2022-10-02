@@ -66,7 +66,7 @@ public class Job {
         return output;
 
     }
-////        if value is empty} return Key: "Data not available" name.getValue ==
+////        if value is empty "" return Key: "Data not available" name.getValue ==
 ////        if ID: value is filled and other fields are empty return "OOPS! This job does not seem to exist.
 
     @Override
